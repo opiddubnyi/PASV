@@ -13,7 +13,7 @@ class Car():
         print(f"{self.name} is stopped. It was a nice ride!")
 
     def drive(self, gear=1):
-        self.speed = 10 * gear
+        self.speed = 20 * gear
         print(f"You're driving {self.name} at {self.speed} mp/h. Drive safe!")
 
     def add_pass(self, *args):
@@ -24,6 +24,9 @@ class Car():
             else:
                 print(f'Sorry,{person} cant be seated, all seats are '
                       'taken!')
+
+    def get_pass(self):
+        return self.passgr
 
     def remove_pass(self, *args):
         for person in args:
@@ -39,3 +42,4 @@ car.brake()
 car.add_pass('Vasya', 'Petya', 'Masha')
 car.remove_pass('SSS')
 car.add_pass('Petya', 'Masha')
+print(car.get_pass())
